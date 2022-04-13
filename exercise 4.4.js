@@ -1,11 +1,19 @@
-const leapyear = (year) => {
-     if (year % 4 === 0) {
-      console.log("It is indeed a leap year");
-    } else if (year % 400 === 0) {
-      console.log("It is indeed a leap year");
-    } else if  (year % 100 === 0) {
-      console.log("This is not a leap year.");
-    } else {
-      console.log("This is not a leap year.");
+const dividtoseven = (n) => {
+    let result = "";
+  
+    for (let i = 1; i <= n; i += 1) {
+      if (i % 7 === 0 && (i + "").includes("7")) {
+        result += " BOOM-BOOM";
+      } else if (i % 7 === 0) {
+        result += "BOOM";
+      } else {
+        result += i;
+      }
+      if (i < n) {
+        result += ",";
+      }
     }
+    console.log(result);
   };
+  
+  dividtoseven(27);
