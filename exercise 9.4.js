@@ -1,16 +1,16 @@
 
-const   steps = (N) => {
-    let final = "'";
-    for (let i = 1; i <= N; i++) {
-      final += "#";
-      for (let j = N - i; j > 0; j--) {
-        final += " ";
+const stepS = (N) => {
+    let result = new Array(n).fill("'");
+    for (let i = N; i > 0; i--) {
+      for (let j = 0; j < N; j++) {
+        if (i + j >= N) {
+          result[j] += "#";
+        } else {
+          result[j] += " ";
+        }
       }
-      console.log(final + "'");
-      final = final.replaceAll(" ", "");
     }
+    return result.join("'\n") + "'";
   };
-  steps(3);
-  console.log();
   
-  
+  console.log(stepS(3));
