@@ -1,2 +1,2 @@
- Java-script exercises 3.3 -> 14
+ Java-script exercises 3.3 -> 17.2
  
